@@ -1,0 +1,735 @@
+﻿@model IEnumerable<App.Entities.Base.StructuralColumns>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IDdetipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fasedecreación)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fasedederribo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcióndediseño)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volumenreforzadoestimado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volumen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comentarios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desfasesuperior)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Desfasedebase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivelsuperior)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivelbase)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Analizarcomo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitud)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fase_Constructiva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nivel_del_Elemento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sector)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Elemento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripción_de_Partida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo_de_Altura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcMaterial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcExportAs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcElementAssembly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ObjectTypeOverride)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcPresentationLayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcTag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Finish_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bottom_elevation_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Top_elevation_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Preliminary_mark_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phase_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Class_Tekla_Common_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volume_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gross_footprint_area_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area_per_tons_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Net_surface_area_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Width_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length_Tekla_Quantity_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetVolume_BaseQuantities_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IfcPropertySetList)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Length_BaseQuantities_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OuterSurfaceArea_BaseQuantities_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetWeight_BaseQuantities_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoadBearing_Pset_ColumnCommon_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Reference_Pset_ColumnCommon_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sector_op02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.H_V)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secuencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Frente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Recinto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha_Incio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.C_liberación)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ecompresion28)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ecompresion7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.f_c)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fvaciado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OBS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad01)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad03)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad04)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad05)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad06)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad07)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad08)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad09)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ad10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ded01)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ded02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ded03)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ded04)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ded05)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ETACliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MatCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metrados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subcontratista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodAct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodCuadrilla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodFrente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodLote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPiso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPrioridad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodWBS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CtrlCambios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ratio_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ratio_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ratio_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Responsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restricciones)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad01)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad02)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad03)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad04)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad05)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FactProductividad06)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RatPpto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RatPrev)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RatReal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_de_Avance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planificado_Concreto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planificado_Acero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Planificado_Encofrado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Real_Concreto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Real_Acero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Real_Encofrado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ejecutado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maestro_Concreto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Maestro_Incio_Concreto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plataformado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDdetipo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fasedecreación)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fasedederribo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcióndediseño)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volumenreforzadoestimado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volumen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comentarios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desfasesuperior)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Desfasedebase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivelsuperior)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivelbase)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Analizarcomo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitud)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fase_Constructiva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nivel_del_Elemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sector)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Elemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripción_de_Partida)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tipo_de_Altura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcMaterial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcExportAs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcElementAssembly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObjectTypeOverride)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcPresentationLayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcTag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Finish_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bottom_elevation_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Top_elevation_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preliminary_mark_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phase_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class_Tekla_Common_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volume_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gross_footprint_area_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area_per_tons_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Net_surface_area_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Width_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Length_Tekla_Quantity_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetVolume_BaseQuantities_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IfcPropertySetList)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Length_BaseQuantities_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OuterSurfaceArea_BaseQuantities_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetWeight_BaseQuantities_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoadBearing_Pset_ColumnCommon_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Reference_Pset_ColumnCommon_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sector_op02)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.H_V)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secuencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Frente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Recinto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha_Incio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.C_liberación)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ecompresion28)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ecompresion7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.f_c)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fvaciado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OBS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad01)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad02)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad03)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad04)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad05)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad06)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad07)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad08)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad09)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ad10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ded01)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ded02)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ded03)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ded04)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ded05)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETACliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MatCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metrados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subcontratista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodAct)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodCuadrilla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodFrente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodLote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPiso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPrioridad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodWBS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CtrlCambios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ratio_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ratio_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ratio_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Restricciones)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad01)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad02)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad03)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad04)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad05)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FactProductividad06)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RatPpto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RatPrev)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RatReal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_de_Avance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Planificado_Concreto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Planificado_Acero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Planificado_Encofrado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Real_Concreto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Real_Acero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Real_Encofrado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ejecutado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maestro_Concreto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Maestro_Incio_Concreto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plataformado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Update", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

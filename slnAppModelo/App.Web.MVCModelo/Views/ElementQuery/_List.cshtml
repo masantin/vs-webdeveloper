@@ -1,0 +1,182 @@
+﻿@model IEnumerable<App.Entities.Queries.ElementQuery>
+<!-- base css -->
+<link rel="stylesheet" media="screen, print" href="css/vendors.bundle.css">
+<link rel="stylesheet" media="screen, print" href="css/app.bundle.css">
+<!-- Place favicon.ico in the root directory -->
+<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+<style>
+    .dataTables_length{
+        padding-right:15px;
+    }
+</style>
+<div>
+    <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
+        <thead class="bg-highlight">
+            <tr>
+                <th>
+                    
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tabla_origen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Elemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Volumen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Area)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NivelDelElemento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EstadoDeAvance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sector)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#modal-container"
+                           class="btn btn-success btn-sm">
+                            <span class="fal fa-bars">  </span>
+                        </a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tabla_origen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Elemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Volumen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Area)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NivelDelElemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EstadoDeAvance)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sector)
+                    </td>
+                    <td>
+                        <a href="#" data-toggle="modal" data-target="#modal-container"
+                           class="btn btn-warning btn-sm">
+                            <span class="fal fa-edit"> Edit </span>
+                        </a>                      
+                      
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script src="~/js/vendors.bundle.js"></script>
+<script src="~/js/app.bundle.js"></script>
+<script src="~/js/datagrid/datatables/datatables.bundle.js"></script>
+<script src="~/js/datagrid/datatables/datatables.export.js"></script>
+@Scripts.Render("~/bundles/modernizr")
+<script>
+    $(document).ready(function () {
+        // Setup - add a text input to each footer cell
+        $('#dt-basic-example thead tr').clone(true).appendTo('#dt-basic-example thead');
+        $('#dt-basic-example thead tr:eq(1) th').each(function (i) {
+            var title = $(this).text();
+            $(this).html('<input type="text" class="form-control form-control-sm" placeholder="Search ' + title + '" />');
+
+            $('input', this).on('keyup change', function () {
+                if (table.column(i).search() !== this.value) {
+                    table
+                        .column(i)
+                        .search(this.value)
+                        .draw();
+                }
+            });
+        });
+
+        var table = $('#dt-basic-example').DataTable(
+            {
+                responsive: true,
+                orderCellsTop: true,
+                fixedHeader: true,
+                
+                 dom:
+                        /*	--- Layout Structure 
+                        	--- Options
+                        	l	-	length changing input control
+                        	f	-	filtering input
+                        	t	-	The table!
+                        	i	-	Table information summary
+                        	p	-	pagination control
+                        	r	-	processing display element
+                        	B	-	buttons
+                        	R	-	ColReorder
+                        	S	-	Select
+
+                        	--- Markup
+                        	< and >				- div element
+                        	<"class" and >		- div with a class
+                        	<"#id" and >		- div with an ID
+                        	<"#id.class" and >	- div with an ID and a class
+
+                        	--- Further reading
+                        	https://datatables.net/reference/option/dom
+                        	--------------------------------------
+                         */
+                        "<'row mb-3'<'col-sm-12 col-md-4 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-8 d-flex align-items-center justify-content-end'lB>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                    buttons: [
+                        {
+                        	extend:    'colvis',
+                        	text:      'Column Visibility',
+                        	titleAttr: 'Col visibility',
+                        	className: 'mr-sm-3'
+                        },
+                        {
+                            extend: 'pdfHtml5',
+                            text: 'PDF',
+                            titleAttr: 'Generate PDF',
+                            className: 'btn-outline-danger btn-sm mr-1'
+                        },
+                        {
+                            extend: 'excelHtml5',
+                            text: 'Excel',
+                            titleAttr: 'Generate Excel',
+                            className: 'btn-outline-success btn-sm mr-1'
+                        },
+                        {
+                            extend: 'csvHtml5',
+                            text: 'CSV',
+                            titleAttr: 'Generate CSV',
+                            className: 'btn-outline-primary btn-sm mr-1'
+                        },
+                        {
+                            extend: 'copyHtml5',
+                            text: 'Copy',
+                            titleAttr: 'Copy to clipboard',
+                            className: 'btn-outline-primary btn-sm mr-1'
+                        },
+                        {
+                            extend: 'print',
+                            text: 'Print',
+                            titleAttr: 'Print Table',
+                            className: 'btn-outline-primary btn-sm'
+                        }
+                    ]
+            });
+
+    });
+</script>

@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BEA4D15-A387-4DCA-8D91-B9BF082AE3BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.Entities.Base</RootNamespace>
+    <AssemblyName>App.Entities.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirTerminals.cs" />
+    <Compile Include="AirTerminalTypes.cs" />
+    <Compile Include="AnalyzesAsTypeEnums.cs" />
+    <Compile Include="AreaLoadOnSlab.cs" />
+    <Compile Include="AreaLoads.cs" />
+    <Compile Include="Areas.cs" />
+    <Compile Include="AreaSchemes.cs" />
+    <Compile Include="Assemblies.cs" />
+    <Compile Include="AssemblyCodes.cs" />
+    <Compile Include="AssemblyTypes.cs" />
+    <Compile Include="BuildingTypeSettings.cs" />
+    <Compile Include="CableTrayFittings.cs" />
+    <Compile Include="CableTrayFittingType.cs" />
+    <Compile Include="CableTrays.cs" />
+    <Compile Include="CableTrayTypes.cs" />
+    <Compile Include="Casework.cs" />
+    <Compile Include="CaseworkOnWall.cs" />
+    <Compile Include="CaseworkTypes.cs" />
+    <Compile Include="Categories.cs" />
+    <Compile Include="Ceilings.cs" />
+    <Compile Include="CeilingTypes.cs" />
+    <Compile Include="Columns1.cs" />
+    <Compile Include="ColumnTypes.cs" />
+    <Compile Include="CommunicationDevices.cs" />
+    <Compile Include="CommunicationDeviceTypes.cs" />
+    <Compile Include="ConditionTypeEnums.cs" />
+    <Compile Include="ConduitFittings.cs" />
+    <Compile Include="ConduitFittingType.cs" />
+    <Compile Include="Conduits.cs" />
+    <Compile Include="ConduitTypes.cs" />
+    <Compile Include="Constructions.cs" />
+    <Compile Include="ConstructionTypes.cs" />
+    <Compile Include="CoverTypes.cs" />
+    <Compile Include="CurtainPanels.cs" />
+    <Compile Include="CurtainPanelTypes.cs" />
+    <Compile Include="CurtainSystems.cs" />
+    <Compile Include="CurtainSystemTypes.cs" />
+    <Compile Include="CurtainWallMullions.cs" />
+    <Compile Include="CurtainWallMullionTypes.cs" />
+    <Compile Include="CurtainWallPanelOnRoof.cs" />
+    <Compile Include="CurtainWallPanelOnWall.cs" />
+    <Compile Include="DataDevices.cs" />
+    <Compile Include="DataDeviceTypes.cs" />
+    <Compile Include="DemandFactors.cs" />
+    <Compile Include="DemandFactorTypes.cs" />
+    <Compile Include="DesignOptions.cs" />
+    <Compile Include="DesignOptionSets.cs" />
+    <Compile Include="DistributionSystems.cs" />
+    <Compile Include="DistributionSystemTypes.cs" />
+    <Compile Include="DivisionProfiles.cs" />
+    <Compile Include="Doors.cs" />
+    <Compile Include="DoorTypes.cs" />
+    <Compile Include="DoorWall.cs" />
+    <Compile Include="DuctAccessories.cs" />
+    <Compile Include="DuctAccessoryTypes.cs" />
+    <Compile Include="DuctFittings.cs" />
+    <Compile Include="DuctFittingTypes.cs" />
+    <Compile Include="DuctInsulations.cs" />
+    <Compile Include="DuctInsulationTypes.cs" />
+    <Compile Include="DuctLinings.cs" />
+    <Compile Include="DuctLiningTypes.cs" />
+    <Compile Include="DuctPlaceholders.cs" />
+    <Compile Include="Ducts.cs" />
+    <Compile Include="DuctSystems.cs" />
+    <Compile Include="DuctSystemTypeEnums.cs" />
+    <Compile Include="DuctSystemTypes.cs" />
+    <Compile Include="DuctTypes.cs" />
+    <Compile Include="EaveCutterTypeEnums.cs" />
+    <Compile Include="ElectricalCircuits.cs" />
+    <Compile Include="ElectricalDemandFactorDefinitions.cs" />
+    <Compile Include="ElectricalEquipment.cs" />
+    <Compile Include="ElectricalEquipmentTypes.cs" />
+    <Compile Include="ElectricalFixtures.cs" />
+    <Compile Include="ElectricalFixtureTypes.cs" />
+    <Compile Include="ElectricalLoadClassificationParameterElement.cs" />
+    <Compile Include="ElectricalLoadClassifications.cs" />
+    <Compile Include="ElectricalPhaseConfigurationEnums.cs" />
+    <Compile Include="ElectricalPhaseEnums.cs" />
+    <Compile Include="ElectricalSystemEnums.cs" />
+    <Compile Include="ElementLevel.cs" />
+    <Compile Include="ElementPhase.cs" />
+    <Compile Include="FabricLocationEnums.cs" />
+    <Compile Include="Fascias.cs" />
+    <Compile Include="FasciaTypes.cs" />
+    <Compile Include="FireAlarmDevices.cs" />
+    <Compile Include="FireAlarmDeviceTypes.cs" />
+    <Compile Include="FlexDucts.cs" />
+    <Compile Include="FlexDuctTypes.cs" />
+    <Compile Include="FlexPipes.cs" />
+    <Compile Include="FlexPipeTypes.cs" />
+    <Compile Include="Floors.cs" />
+    <Compile Include="FloorTypes.cs" />
+    <Compile Include="Fluids.cs" />
+    <Compile Include="FluidTypes.cs" />
+    <Compile Include="Furniture.cs" />
+    <Compile Include="FurnitureSystems.cs" />
+    <Compile Include="FurnitureSystemTypes.cs" />
+    <Compile Include="FurnitureTypes.cs" />
+    <Compile Include="GenericModelOnRoof.cs" />
+    <Compile Include="GenericModelOnWall.cs" />
+    <Compile Include="GenericModels.cs" />
+    <Compile Include="GenericModelTypes.cs" />
+    <Compile Include="Grids.cs" />
+    <Compile Include="GridTypes.cs" />
+    <Compile Include="Gutters.cs" />
+    <Compile Include="GutterTypes.cs" />
+    <Compile Include="HVACLoadSchedules.cs" />
+    <Compile Include="HVACZones.cs" />
+    <Compile Include="InstanceUsageEnums.cs" />
+    <Compile Include="InternalAreaLoads.cs" />
+    <Compile Include="InternalLineLoads.cs" />
+    <Compile Include="InternalPointLoads.cs" />
+    <Compile Include="Levels.cs" />
+    <Compile Include="LevelTypes.cs" />
+    <Compile Include="LightingDevices.cs" />
+    <Compile Include="LightingDeviceTypes.cs" />
+    <Compile Include="LightingFixtureOnCeiling.cs" />
+    <Compile Include="LightingFixtureOnWall.cs" />
+    <Compile Include="LightingFixtures.cs" />
+    <Compile Include="LightingFixtureTypes.cs" />
+    <Compile Include="LineLoadOnBeam.cs" />
+    <Compile Include="LineLoads.cs" />
+    <Compile Include="LoadClassificationTypeEnums.cs" />
+    <Compile Include="Mass.cs" />
+    <Compile Include="MassExteriorWall.cs" />
+    <Compile Include="MassFloor.cs" />
+    <Compile Include="MassGlazing.cs" />
+    <Compile Include="MassInteriorWall.cs" />
+    <Compile Include="MassOpening.cs" />
+    <Compile Include="MassRoof.cs" />
+    <Compile Include="MassSkylight.cs" />
+    <Compile Include="MassTypes.cs" />
+    <Compile Include="MaterialQuantities.cs" />
+    <Compile Include="Materials.cs" />
+    <Compile Include="MechanicalEquipment.cs" />
+    <Compile Include="MechanicalEquipmentOnWall.cs" />
+    <Compile Include="MechanicalEquipmentTypes.cs" />
+    <Compile Include="NeutralModeEnums.cs" />
+    <Compile Include="NurseCallDevices.cs" />
+    <Compile Include="NurseCallDeviceTypes.cs" />
+    <Compile Include="OmniClassNumbers.cs" />
+    <Compile Include="OpeningOnFloor.cs" />
+    <Compile Include="OpeningOnWall.cs" />
+    <Compile Include="Openings.cs" />
+    <Compile Include="PanelScheduleTemplatesBranchPanel.cs" />
+    <Compile Include="PanelScheduleTemplatesDataPanel.cs" />
+    <Compile Include="PanelScheduleTemplatesSwitchboard.cs" />
+    <Compile Include="Parking.cs" />
+    <Compile Include="ParkingTypes.cs" />
+    <Compile Include="Phases.cs" />
+    <Compile Include="PipeAccessories.cs" />
+    <Compile Include="PipeAccessoryTypes.cs" />
+    <Compile Include="PipeConnections.cs" />
+    <Compile Include="PipeConnectionTypes.cs" />
+    <Compile Include="PipeFittings.cs" />
+    <Compile Include="PipeFittingTypes.cs" />
+    <Compile Include="PipeFlowStateEnums.cs" />
+    <Compile Include="PipeInsulations.cs" />
+    <Compile Include="PipeInsulationTypes.cs" />
+    <Compile Include="PipeMaterials.cs" />
+    <Compile Include="PipeMaterialTypes.cs" />
+    <Compile Include="PipePlaceholders.cs" />
+    <Compile Include="Pipes.cs" />
+    <Compile Include="PipeSchedules.cs" />
+    <Compile Include="PipeScheduleTypes.cs" />
+    <Compile Include="PipeSegments.cs" />
+    <Compile Include="PipeSystemTypeEnums.cs" />
+    <Compile Include="PipeTypes.cs" />
+    <Compile Include="PipingSystems.cs" />
+    <Compile Include="PipingSystemTypes.cs" />
+    <Compile Include="Planting.cs" />
+    <Compile Include="PlantingTypes.cs" />
+    <Compile Include="PlumbingFixtureOnWall.cs" />
+    <Compile Include="PlumbingFixtures.cs" />
+    <Compile Include="PlumbingFixtureTypes.cs" />
+    <Compile Include="PointLoads.cs" />
+    <Compile Include="PowerFactorStateTypeEnums.cs" />
+    <Compile Include="Profiles.cs" />
+    <Compile Include="ProjectInformation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyLines.cs" />
+    <Compile Include="PropertyLineTypes.cs" />
+    <Compile Include="Railings.cs" />
+    <Compile Include="RailingTypes.cs" />
+    <Compile Include="Ramps.cs" />
+    <Compile Include="RampTypes.cs" />
+    <Compile Include="RebarLayoutEnums.cs" />
+    <Compile Include="RebarOnColumn.cs" />
+    <Compile Include="RebarOnFloor.cs" />
+    <Compile Include="RebarOnFoundation.cs" />
+    <Compile Include="RebarOnFraming.cs" />
+    <Compile Include="RebarOnWall.cs" />
+    <Compile Include="RebarStyleEnums.cs" />
+    <Compile Include="RevitDBLinkInfo.cs" />
+    <Compile Include="Roofs.cs" />
+    <Compile Include="RoofTypes.cs" />
+    <Compile Include="RoomAssociations.cs" />
+    <Compile Include="RoomFromToAssociations.cs" />
+    <Compile Include="Rooms.cs" />
+    <Compile Include="RoomTags.cs" />
+    <Compile Include="SecurityDevices.cs" />
+    <Compile Include="SecurityDeviceTypes.cs" />
+    <Compile Include="ServiceTypeEnums.cs" />
+    <Compile Include="Sheets.cs" />
+    <Compile Include="Site.cs" />
+    <Compile Include="SiteTypes.cs" />
+    <Compile Include="SlabEdges.cs" />
+    <Compile Include="SlabEdgeTypes.cs" />
+    <Compile Include="SpaceAssociations.cs" />
+    <Compile Include="Spaces.cs" />
+    <Compile Include="SpaceTypeEnums.cs" />
+    <Compile Include="SpaceTypeSettings.cs" />
+    <Compile Include="SpecialtyEquipment.cs" />
+    <Compile Include="SpecialtyEquipmentTypes.cs" />
+    <Compile Include="Sprinklers.cs" />
+    <Compile Include="SprinklerTypes.cs" />
+    <Compile Include="Stairs.cs" />
+    <Compile Include="StairTypes.cs" />
+    <Compile Include="StructuralColumns.cs" />
+    <Compile Include="StructuralColumnTypes.cs" />
+    <Compile Include="StructuralFabricReinforcement.cs" />
+    <Compile Include="StructuralFabricReinforcementTypes.cs" />
+    <Compile Include="StructuralFoundations.cs" />
+    <Compile Include="StructuralFoundationTypes.cs" />
+    <Compile Include="StructuralFraming.cs" />
+    <Compile Include="StructuralFramingTypes.cs" />
+    <Compile Include="StructuralRebar.cs" />
+    <Compile Include="StructuralRebarBarTypes.cs" />
+    <Compile Include="StructuralRebarHookTypes.cs" />
+    <Compile Include="StructuralRebarShapes.cs" />
+    <Compile Include="StructuralStiffeners.cs" />
+    <Compile Include="StructuralStiffenerTypes.cs" />
+    <Compile Include="StructuralTrusses.cs" />
+    <Compile Include="StructuralTrussTypes.cs" />
+    <Compile Include="SwitchSystem.cs" />
+    <Compile Include="TelephoneDevices.cs" />
+    <Compile Include="TelephoneDeviceTypes.cs" />
+    <Compile Include="Topography.cs" />
+    <Compile Include="TopographyTypes.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Views.cs" />
+    <Compile Include="Voltages.cs" />
+    <Compile Include="VoltageTypes.cs" />
+    <Compile Include="Walls.cs" />
+    <Compile Include="WallSweeps.cs" />
+    <Compile Include="WallSweepTypes.cs" />
+    <Compile Include="WallTypes.cs" />
+    <Compile Include="WallUsageEnums.cs" />
+    <Compile Include="Windows.cs" />
+    <Compile Include="WindowTypes.cs" />
+    <Compile Include="WindowWall.cs" />
+    <Compile Include="WireInsulations.cs" />
+    <Compile Include="WireInsulationTypes.cs" />
+    <Compile Include="WireMaterials.cs" />
+    <Compile Include="WireMaterialTypes.cs" />
+    <Compile Include="Wires.cs" />
+    <Compile Include="WireTemperatureRatings.cs" />
+    <Compile Include="WireTemperatureRatingTypes.cs" />
+    <Compile Include="WireTypes.cs" />
+    <Compile Include="WiringTypeEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

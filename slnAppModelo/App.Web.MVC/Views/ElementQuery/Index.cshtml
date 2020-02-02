@@ -1,0 +1,69 @@
+﻿@model IEnumerable<App.Entities.Queries.ElementQuery>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tabla_origen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Elemento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Volumen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NivelDelElemento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoDeAvance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sector)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tabla_origen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Elemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Volumen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NivelDelElemento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoDeAvance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sector)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

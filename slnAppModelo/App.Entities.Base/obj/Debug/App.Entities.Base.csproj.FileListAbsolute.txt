@@ -1,0 +1,12 @@
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.csprojAssemblyReference.cache
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.csproj.CoreCompileInputs.cache
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\bin\Debug\App.Entities.Base.dll
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\bin\Debug\App.Entities.Base.pdb
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.dll
+C:\Users\lfernandezr\VSD\VS-web-developer\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.pdb
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\bin\Debug\App.Entities.Base.dll
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\bin\Debug\App.Entities.Base.pdb
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.csprojAssemblyReference.cache
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.csproj.CoreCompileInputs.cache
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.dll
+C:\Users\lfernandezr\VSD\Proyecto\slnAppModelo\App.Entities.Base\obj\Debug\App.Entities.Base.pdb
