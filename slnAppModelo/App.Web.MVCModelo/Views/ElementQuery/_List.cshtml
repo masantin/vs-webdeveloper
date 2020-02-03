@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<App.Entities.Queries.ElementQuery>
 <!-- base css -->
-<link rel="stylesheet" media="screen, print" href="css/vendors.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/app.bundle.css">
+<link rel="stylesheet" media="screen, print" href="~/css/vendors.bundle.css">
+<link rel="stylesheet" media="screen, print" href="~/css/app.bundle.css">
 <!-- Place favicon.ico in the root directory -->
-<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
+<link rel="stylesheet" media="screen, print" href="~/css/datagrid/datatables/datatables.bundle.css">
 <style>
     .dataTables_length{
         padding-right:15px;
@@ -13,9 +13,6 @@
     <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
         <thead class="bg-highlight">
             <tr>
-                <th>
-                    
-                </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Tabla_origen)
                 </th>
@@ -37,19 +34,14 @@
                 <th>
                     @Html.DisplayNameFor(model => model.Sector)
                 </th>
-                <th></th>
+                <th>
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
-                        <a href="#" data-toggle="modal" data-target="#modal-container"
-                           class="btn btn-success btn-sm">
-                            <span class="fal fa-bars">  </span>
-                        </a>
-                    </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Tabla_origen)
                     </td>
@@ -73,10 +65,13 @@
                     </td>
                     <td>
                         <a href="#" data-toggle="modal" data-target="#modal-container"
+                           class="btn btn-success btn-sm">
+                            <span class="fal fa-bars">  </span>
+                        </a>
+                        <a href="#" data-toggle="modal" data-target="#modal-container"
                            class="btn btn-warning btn-sm">
                             <span class="fal fa-edit"> Edit </span>
-                        </a>                      
-                      
+                        </a>
                     </td>
                 </tr>
             }
